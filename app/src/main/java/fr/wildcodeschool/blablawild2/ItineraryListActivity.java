@@ -15,6 +15,7 @@ public class ItineraryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_list);
 
+
         TripModel tripModel = getIntent().getParcelableExtra(ItinerarySearchActivity.EXTRA_TRIP);
         this.setTitle(String.format(getString(R.string.departure_to_destination), tripModel.getDeparture(), tripModel.getDestination()));
 
@@ -29,5 +30,7 @@ public class ItineraryListActivity extends AppCompatActivity {
 
         TripAdapter adapter = new TripAdapter(this, tripList);
         listTrip.setAdapter(adapter);
+
+
     }
 }
